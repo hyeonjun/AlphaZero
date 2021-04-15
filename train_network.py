@@ -62,5 +62,5 @@ def train_network():
     del model
 
 # 동작 확인
-if __name__ == '__main':
+if __name__ == '__main__':
     train_network()
