@@ -136,7 +136,7 @@ class GameUI(tk.Frame):
 
 
 # 베스트 플레이어 모델 로드
-model = load_model('./model/best.h5')
+model = load_model('./model/colab/best.h5')
 # 게임 UI 실행
 f = GameUI(model=model)
 f.pack()
