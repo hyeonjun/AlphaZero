@@ -134,7 +134,7 @@ def boltzman(xs, temperature):
 # 몬테카를로 트리 탐색의 행동을 선택 'pv_mcts_action'을 사용해 게임이 종료될 때까지 실행한다.
 if __name__ == '__main__':
     # 모델 로드
-    path = sorted(Path('./model').glob('*.h5'))[-1]
+    path = sorted(Path('model').glob('*.h5'))[-1]
     model = load_model(str(path))
 
     # 상태 생성
