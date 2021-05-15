@@ -80,14 +80,14 @@ class GameUI(tk.Frame):
 
     # 돌 그리기 'draw_piece()'
     # 인수인 'index'는 매스 위치, 'first_player'는 선 수 여부 판단
-    # 선 수는 빨간 원, 후 후는 검은 원
+    # 선 수는 빨간 원, 후 수는 노란 원
     def draw_piece(self, index, first_player):
         x = (index % 7) * 40 + 5
         y = int(index / 7) * 40 + 5
         if first_player:
-            self.c.create_oval(x, y, x + 30, y + 30, width=1.0, outline='#FF0000')
+            self.c.create_oval(x, y, x + 30, y + 30, width=1.0, fill='#FF0000')
         else:
-            self.c.create_line(x, y, x + 30, y + 30, width=1.0, fill='#FFFF00')
+            self.c.create_oval(x, y, x + 30, y + 30, width=1.0, fill='#FFFF00')
 
     # 화면 갱신 'on_draw()'
     # 모든 매스와 돌을 다시 그린다.

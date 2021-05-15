@@ -68,7 +68,7 @@ def play(model):
     value = first_play_value(state)
     for i in range(len(history)):
         history[i][2] = value
-        value = - value
+        value = -value
     return history
 
 # 셀프 플레이 실행
