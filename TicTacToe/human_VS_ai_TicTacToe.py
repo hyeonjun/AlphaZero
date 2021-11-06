@@ -1,9 +1,7 @@
-# 패키지 임포드
+# 패키지 임포트
 from game import State
 from pv_mcts import pv_mcts_action
 from tensorflow.keras.models import load_model
-from pathlib import Path
-from threading import Thread
 import tkinter as tk
 
 """

@@ -46,12 +46,12 @@ def train_network():
     # 출력
     print_callback = LambdaCallback(
         on_epoch_begin=lambda epoch, logs:
-            print('\rTrain {}/{}'.format(epoch+1, RN_EPOCHS), end='')
-    )
+            print('\rTrain {}/{}'.format(epoch+1, RN_EPOCHS), end=''))
 
     # 학습 실행
-    model.fit(xs, [y_policies, y_values], batch_size=128, epochs=RN_EPOCHS,
-              verbose=0, callbacks=[lr_decay, print_callback])
+    model.fit(xs, [y_policies, y_values], batch_size=128,
+              epochs=RN_EPOCHS, verbose=0,
+              callbacks=[lr_decay, print_callback])
     print()
 
     # 최신 플레이어 모델 저장

@@ -22,7 +22,8 @@ DN_OUTPUT_SIZE = 9 # 행동 수(배치 수(3 x 3))
 # 컨볼루셔널 레리어 생성
 # conv(filters)로 ResNet의 컨볼루셔널 레이어를 생성한다.
 def conv(filters):
-    return Conv2D(filters, 3, padding='same', use_bias=False, kernel_initializer='he_normal', kernel_regularizer=l2(0.0005))
+    return Conv2D(filters, 3, padding='same', use_bias=False,
+                  kernel_initializer='he_normal', kernel_regularizer=l2(0.0005))
 
 # 레지듀얼 블록 생성
 # residual_block()으로 ResNet의 레지듀얼 블록을 생성한다.

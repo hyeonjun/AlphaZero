@@ -45,7 +45,8 @@ class State:
 
     # 무승부 여부 확인
     def is_draw(self):
-        return self.piece_count(self.pieces) + self.piece_count(self.enemy_pieces) == 9
+        return self.piece_count(self.pieces) \
+               + self.piece_count(self.enemy_pieces) == 9
 
     # 게임 종료 여부 확인
     def is_done(self):
@@ -215,7 +216,8 @@ def mcts_action(state):
                 t += c.n
             ucb1_values = []
             for child_node in self.child_nodes:
-                ucb1_values.append(-child_node.w / child_node.n + 2 * (2 * math.log(t) / child_node.n) ** 0.5)
+                ucb1_values.append(-child_node.w / child_node.n + 2 *
+                                   (2 * math.log(t) / child_node.n) ** 0.5)
 
             # UCB1가 가장 큰 자녀 노드를 반환
             return self.child_nodes[argmax(ucb1_values)]
